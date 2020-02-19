@@ -1,7 +1,7 @@
 import { Component, Optional } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
-
+import { MouseEvent } from '@agm/core';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +9,12 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+    // google maps zoom level
+  zoom: number = 8;
+  
+  // initial center position for the map
+  lat: number = 40.7128;
+  lng: number = -74.0060;
   isDarkTheme = false;
   lastDialogResult: string;
   mode: string;
@@ -83,6 +89,39 @@ export class AppComponent {
   set tickInterval(v) {
     this.slider.tickInterval = Number(v);
   }
+  clickedMarker(label: string, index: number) {
+    console.log(`clicked the marker: ${label || index}`)
+  }
+  
+  mapClicked($event: MouseEvent) {
+    this.markers.push({
+      lat: $event.coords.lat,
+      lng: $event.coords.lng,
+      draggable: true
+    });
+  }
+  
+  markerDragEnd(m: marker, $event: MouseEvent) {
+    console.log('dragEnd', m, $event);
+  }
+  
+  markers: marker[] = [
+	  {
+		  lat: 40.7128,
+		  lng: -74.0060,
+		  label: 'Keystone',
+		  draggable: true
+	  },
+  ]
+}
+
+// just an interface for type safety.
+interface marker {
+	lat: number;
+	lng: number;
+	label?: string;
+	draggable: boolean;
+
 }
 
 
@@ -103,5 +142,7 @@ export class AppComponent {
   `,
 })
 export class DialogContentComponent {
-  constructor( @Optional() public dialogRef: MatDialogRef<DialogContentComponent>) { }
+  constructor( @Optional() public dialogRef: MatDialogRef<DialogContentComponent>) { 
+    
+  }
 }

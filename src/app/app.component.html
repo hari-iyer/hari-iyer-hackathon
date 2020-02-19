@@ -69,9 +69,30 @@
         <h2 class="example-h2">Material Tab</h2>
         <mat-tab-group>
           <mat-tab label="Air Nomads">
-            <p>The Air Nomads were a civilization composed of people who practiced the art of airbending. While nomadic, Air
-              Nomads did inhabit four major air temples, each built on remote locations, only easily reachable with flying
-              bison. The Air Nomads were a highly spiritual group of people.</p>
+           <agm-map 
+  [latitude]="lat"
+  [longitude]="lng"
+  [zoom]="zoom"
+  [disableDefaultUI]="false"
+  [zoomControl]="false"
+  (mapClick)="mapClicked($event)">
+
+  <agm-marker 
+      *ngFor="let m of markers; let i = index"
+      (markerClick)="clickedMarker(m.label, i)"
+      [latitude]="m.lat"
+      [longitude]="m.lng"
+      [label]="m.label"
+      [markerDraggable]="m.draggable"
+      (dragEnd)="markerDragEnd(m, $event)">
+      
+    <agm-info-window>
+      <strong>InfoWindow content</strong>
+    </agm-info-window>
+    
+  </agm-marker>
+
+</agm-map>
           </mat-tab>
           <mat-tab label="Water Tribe">
             <p>The Water Tribe is a collective term for people, some of whom practice the art of waterbending, who follow a
