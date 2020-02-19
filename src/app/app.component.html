@@ -61,15 +61,18 @@
       </mat-card-content>
     </mat-card>
     <!-- /Material Button -->
+   
+
 
 
     <!-- Material Tab -->
     <mat-card>
       <mat-card-content>
         <h2 class="example-h2">Material Tab</h2>
+       
         <mat-tab-group>
           <mat-tab label="Air Nomads">
-           <agm-map 
+  <agm-map 
   [latitude]="lat"
   [longitude]="lng"
   [zoom]="zoom"
@@ -85,11 +88,7 @@
       [label]="m.label"
       [markerDraggable]="m.draggable"
       (dragEnd)="markerDragEnd(m, $event)">
-      
-    <agm-info-window>
-      <strong>InfoWindow content</strong>
-    </agm-info-window>
-    
+   
   </agm-marker>
 
 </agm-map>
@@ -120,11 +119,5 @@
       </mat-card-content>
     </mat-card>
     
-
-    <!-- Material Fab-->
-    <button mat-fab class="app-fab">
-      <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
-    </button>
-    <!-- /Material Fab-->
-  </div>
+</div>
 </mat-sidenav-container>
