@@ -112,6 +112,12 @@ export class AppComponent {
 		  label: 'Keystone',
 		  draggable: true
 	  },
+      {
+		  lat: 40.7891,
+		  lng: -73.1350,
+		  label: 'lazy',
+		  draggable: true
+	  }
   ]
 }
 
