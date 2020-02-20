@@ -102,6 +102,7 @@
 
           </mat-tab>
           <mat-tab label="Adventure">
+            <ng-template matTabContent>
 <agm-map 
   [disableDefaultUI]="false"
   [zoomControl]="false"
@@ -126,9 +127,10 @@
   </agm-marker>
 
 </agm-map>
-
+            </ng-template>
           </mat-tab>
           <mat-tab label="Earth Kingdom">
+              <ng-template matTabContent>
            
 <agm-map 
   [disableDefaultUI]="false"
@@ -154,9 +156,10 @@
   </agm-marker>
 
 </agm-map>
+              </ng-template>
           </mat-tab>
           <mat-tab label="Fire Nation">
-           
+     <ng-template matTabContent>       
 <agm-map 
   [disableDefaultUI]="false"
   [zoomControl]="false"
@@ -181,6 +184,7 @@
   </agm-marker>
 
 </agm-map>
+     </ng-template>
           </mat-tab>
         </mat-tab-group>
       </mat-card-content>
