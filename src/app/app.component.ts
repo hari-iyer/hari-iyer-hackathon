@@ -10,7 +10,7 @@ import { MouseEvent } from '@agm/core';
 })
 export class AppComponent {
     // google maps zoom level
-  zoom: number = 8;
+//  zoom: number = 8;
   
   // initial center position for the map
   lat: number = 40.7128;
