@@ -73,63 +73,115 @@
        
         <mat-tab-group>
           <mat-tab label="Lazy">
-  <agm-map 
-  [latitude]="lat"
-  [longitude]="lng"
-  [zoom]="zoom"
+            <agm-map 
   [disableDefaultUI]="false"
   [zoomControl]="false"
-  (mapClick)="mapClicked($event)">
+  (mapClick)="mapClicked($event)"
+  [fitBounds]="true"
+  [latitude]="lat"
+  [longitude]="lng">
 
   <agm-marker 
-      *ngFor="let m of markers; let i = index"
+      *ngFor="let m of relaxMarkers; let i = index"
       (markerClick)="markerClicked(m.label,i);sidenav.toggle();"
       [latitude]="m.lat"
       [longitude]="m.lng"
       [label]="m.label"
-      [markerDraggable]="m.draggable"
-      (dragEnd)="markerDragEnd(m, $event)">
-   
+      [iconUrl]= "m.iconType" 
+      [agmFitBounds]="true" >
+      
+    <agm-info-window>
+      <strong>InfoWindow content</strong>
+    </agm-info-window>
+    
   </agm-marker>
 
 </agm-map>
+
+ 
+
           </mat-tab>
           <mat-tab label="Adventure">
-            <agm-map 
-  [latitude]="lat"
-  [longitude]="lng"
-  [zoom]="zoom"
+          
+<agm-map 
   [disableDefaultUI]="false"
   [zoomControl]="false"
-  (mapClick)="mapClicked($event)">
+  (mapClick)="mapClicked($event)"
+  [fitBounds]="true"
+  [latitude]="lat"
+  [longitude]="lng">
 
   <agm-marker 
-      *ngFor="let m of markers; let i = index"
-      (markerClick)="clickedMarker(m.label, i)"
+      *ngFor="let m of authenticMarkers; let i = index"
+      (markerClick)="markerClicked(m.label,i);sidenav.toggle();"
       [latitude]="m.lat"
       [longitude]="m.lng"
       [label]="m.label"
-      [markerDraggable]="m.draggable"
-      (dragEnd)="markerDragEnd(m, $event)">
-   
+      [iconUrl]= "m.iconType" 
+      [agmFitBounds]="true" >
+      
+    <agm-info-window>
+      <strong>InfoWindow content</strong>
+    </agm-info-window>
+    
+  </agm-marker>
+
+</agm-map>
+
+          </mat-tab>
+          <mat-tab label="Earth Kingdom">
+           
+<agm-map 
+  [disableDefaultUI]="false"
+  [zoomControl]="false"
+  (mapClick)="mapClicked($event)"
+  [fitBounds]="true"
+  [latitude]="lat"
+  [longitude]="lng">
+
+  <agm-marker 
+      *ngFor="let m of advMarkers; let i = index"
+      (markerClick)="markerClicked(m.label,i);sidenav.toggle();"
+      [latitude]="m.lat"
+      [longitude]="m.lng"
+      [label]="m.label"
+      [iconUrl]= "m.iconType" 
+      [agmFitBounds]="true" >
+      
+    <agm-info-window>
+      <strong>InfoWindow content</strong>
+    </agm-info-window>
+    
   </agm-marker>
 
 </agm-map>
           </mat-tab>
-          <mat-tab label="Earth Kingdom">
-            <p>The Earth Kingdom is a massive continent led by an earth monarch and is home to people who practice the art of
-              earthbending. Being the largest of the four nations, it is ethnically diverse with a variance of customs and
-              cultural traditions. The people of the Earth Kingdom are strong and persistent. The geography of the Earth
-              Kingdom varies tremendously, ranging from wooded forests to blazing deserts, mountainous terrain, and grassy
-              plains.
-            </p>
-          </mat-tab>
           <mat-tab label="Fire Nation">
-            <p>The Fire Nation is home to people who practice the art of firebending and is an absolute monarchy led by the
-              Fire Lord. Being composed of several major islands and located on the equator, the nation is considered to
-              be an archipelago. Its economy is the largest and most powerful in the world with a strong industrial sector
-              and advanced technological developments. The climate is normally humid and warm which allows for a diversity
-              of flora and fauna to thrive.</p>
+           
+<agm-map 
+  [disableDefaultUI]="false"
+  [zoomControl]="false"
+  (mapClick)="mapClicked($event)"
+  [fitBounds]="true"
+  [latitude]="lat"
+  [longitude]="lng">
+
+  <agm-marker 
+      *ngFor="let m of luxMarkers; let i = index"
+      (markerClick)="markerClicked(m.label,i);sidenav.toggle();"
+      [latitude]="m.lat"
+      [longitude]="m.lng"
+      [label]="m.label"
+      [iconUrl]= "m.iconType" 
+      [agmFitBounds]="true" >
+      
+    <agm-info-window>
+      <strong>InfoWindow content</strong>
+    </agm-info-window>
+    
+  </agm-marker>
+
+</agm-map>
           </mat-tab>
         </mat-tab-group>
       </mat-card-content>

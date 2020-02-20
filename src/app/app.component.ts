@@ -41,6 +41,146 @@ export class AppComponent {
     'tickInterval': 1,
     'checked': true
   };
+
+  keystoneIcon = {
+    url: 'assets/images/star_icon_orig.png',
+    scaledSize: {
+      width: 75,
+      height: 75
+    }
+  }
+
+  pinIcon = {
+    url: 'assets/images/pin.svg',
+    scaledSize: {
+      width: 75,
+      height: 75
+    }
+  }
+  relaxMarkers: marker[] = [
+    {
+      id: 1,
+		  lat: this.lat,
+		  lng: this.lng,
+		  label: '0',
+      iconType: this.keystoneIcon
+    },
+    {
+      id:2,
+		  lat: this.lat - 0.008,
+		  lng: this.lng + 0.001,
+		  label: '1',
+      iconType: this.pinIcon
+    },
+    {
+      id: 3,
+		  lat: this.lat + 0.0042,
+		  lng: this.lng + 0.0005,
+		  label: '2',
+      iconType: this.pinIcon
+    },
+    {
+      id: 4,
+		  lat: this.lat,
+		  lng: this.lng + 0.005,
+		  label: '3',
+      iconType: this.pinIcon
+    },
+  ]
+
+  authenticMarkers: marker[] = [
+    {
+      id: 1,
+		  lat: this.lat,
+		  lng: this.lng,
+		  label: '0',
+      iconType: this.keystoneIcon
+    },
+    {
+      id: 5,
+		  lat: this.lat - 0.0032,
+		  lng: this.lng - 0.0003,
+		  label: '1',
+      iconType: this.pinIcon
+    },
+    {
+      id: 6,
+		  lat: this.lat + 0.003,
+		  lng: this.lng - 0.0008,
+		  label: '2',
+      iconType: this.pinIcon
+    },
+    {
+      id: 7,
+		  lat: this.lat,
+		  lng: this.lng - 0.007,
+		  label: '3',
+      iconType: this.pinIcon
+	  }
+  ]
+
+  advMarkers: marker[] = [
+    {
+      id: 1,
+		  lat: this.lat,
+		  lng: this.lng,
+		  label: '0',
+      iconType: this.keystoneIcon
+    },
+    {
+      id: 8,
+		  lat: this.lat - 0.0043,
+		  lng: this.lng - 0.0014,
+		  label: '1',
+      iconType: this.pinIcon
+    },
+    {
+      id: 9,
+		  lat: this.lat + 0.0041,
+		  lng: this.lng - 0.0091,
+		  label: '2',
+      iconType: this.pinIcon
+    },
+    {
+      id: 10,
+		  lat: this.lat,
+		  lng: this.lng - 0.0081,
+		  label: '3',
+      iconType: this.pinIcon
+	  }
+  ]
+
+  luxMarkers: marker[] = [
+    {
+      id: 1,
+		  lat: this.lat,
+		  lng: this.lng,
+		  label: '0',
+      iconType: this.keystoneIcon
+    },
+    {
+      id: 11,
+		  lat: this.lat - 0.0012,
+		  lng: this.lng - 0.0003,
+		  label: '1',
+      iconType: this.pinIcon
+    },
+    {
+      id: 12,
+		  lat: this.lat + 0.005,
+		  lng: this.lng - 0.0004,
+		  label: '2',
+      iconType: this.pinIcon
+    },
+    {
+      id: 13,
+		  lat: this.lat,
+		  lng: this.lng - 0.0035,
+		  label: '3',
+      iconType: this.pinIcon
+	  }
+  ]
+
   public tiles = [
     { text: 'One', cols: 3, rows: 1, color: 'lightblue' },
     { text: 'Two', cols: 1, rows: 2, color: 'lightgreen' },
@@ -122,11 +262,11 @@ export class AppComponent {
 
 // just an interface for type safety.
 interface marker {
+  id: number,
 	lat: number;
 	lng: number;
 	label?: string;
-	draggable: boolean;
-
+  iconType: any;
 }
 
 
