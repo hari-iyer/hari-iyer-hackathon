@@ -31,33 +31,7 @@
         <h2 class="example-h2">Trip Suggestions</h2>
        
         <mat-tab-group>
-          <mat-tab label="Lazy">
-            <agm-map 
-  [disableDefaultUI]="false"
-  [zoomControl]="false"
-  (mapClick)="mapClicked($event)"
-  [fitBounds]="true"
-  [latitude]="lat"
-  [longitude]="lng">
 
-  <agm-marker 
-      *ngFor="let m of relaxMarkers; let i = index"
-      (markerClick)="markerClicked(m.label,m.id);sidenav.toggle();"
-      [latitude]="m.lat"
-      [longitude]="m.lng"
-      [label]="m.label"
-      [iconUrl]= "m.iconType" 
-      [agmFitBounds]="true" >
-      
-  
-    
-  </agm-marker>
-
-</agm-map>
-
- 
-
-          </mat-tab>
           <mat-tab label="Active">
             <ng-template matTabContent>
 <agm-map 
@@ -135,6 +109,33 @@
 
 </agm-map>
      </ng-template>
+          </mat-tab>
+                    <mat-tab label="Relaxing">
+            <agm-map 
+  [disableDefaultUI]="false"
+  [zoomControl]="false"
+  (mapClick)="mapClicked($event)"
+  [fitBounds]="true"
+  [latitude]="lat"
+  [longitude]="lng">
+
+  <agm-marker 
+      *ngFor="let m of relaxMarkers; let i = index"
+      (markerClick)="markerClicked(m.label,m.id);sidenav.toggle();"
+      [latitude]="m.lat"
+      [longitude]="m.lng"
+      [label]="m.label"
+      [iconUrl]= "m.iconType" 
+      [agmFitBounds]="true" >
+      
+  
+    
+  </agm-marker>
+
+</agm-map>
+
+ 
+
           </mat-tab>
         </mat-tab-group>
       </mat-card-content>
