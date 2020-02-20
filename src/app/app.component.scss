@@ -9,11 +9,14 @@ mat-sidenav-container.m2app-dark {
 .app-content mat-card {
   margin: 5px;
 }
-
 .app-sidenav {
   vertical-align: middle;
   box-align: middle;
-  
+  position:fixed;
+  top:30%;
+  left:10%;  
+  justify-content: center;
+ 
   
   min-width: 500px;
   max-height: 500px;
