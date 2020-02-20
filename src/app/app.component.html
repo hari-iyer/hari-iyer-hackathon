@@ -3,7 +3,7 @@
   <mat-sidenav #sidenav mode="over" class="app-sidenav" color="primary">
     <mat-toolbar>
       <mat-toolbar-row>
-        <span>test2</span>
+        <span>{{currentCityDetails.name}}</span>
         <span class="app-toolbar-filler"></span>
         <mat-icon class="example-icon">build</mat-icon>
       </mat-toolbar-row>
@@ -83,7 +83,7 @@
 
   <agm-marker 
       *ngFor="let m of markers; let i = index"
-      (markerClick)="sidenav.toggle(m.label,i)"
+      (markerClick)="markerClicked(m.label,i);sidenav.toggle();"
       [latitude]="m.lat"
       [longitude]="m.lng"
       [label]="m.label"

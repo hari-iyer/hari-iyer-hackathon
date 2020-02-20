@@ -20,19 +20,11 @@ export class AppComponent {
   mode: string;
   value: number;
 
-  foods: any[] = [
-    { name: 'Pizza', rating: 'Excellent' },
-    { name: 'Burritos', rating: 'Great' },
-    { name: 'French fries', rating: 'Pretty good' },
-  ];
+  
 
   public selectedValue: string;
 
-  public games = [
-    {value: 'rts-0', viewValue: 'Starcraft'},
-    {value: 'rpg-1', viewValue: 'Baldur\'s Gate'},
-    {value: 'fps-2', viewValue: 'Doom'}
-  ];
+
 
   public progress = 0;
   public slider = {
@@ -57,6 +49,13 @@ export class AppComponent {
   ];
 
   public color: string;
+  public details = [{name:'onetest', details:'twotest'}];
+  public currentCityDetails={};
+  markerClicked( label:string,  index:number){
+    //details
+   this.currentCityDetails=this.details[index]
+
+  }
 
   public availableColors = [
     { name: 'none', color: '' },
