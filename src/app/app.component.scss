@@ -11,7 +11,13 @@ mat-sidenav-container.m2app-dark {
 }
 
 .app-sidenav {
-  min-width: 200px;
+  vertical-align: middle;
+  box-align: middle;
+  
+  
+  min-width: 500px;
+  max-height: 400px;
+
 }
 
 .app-content mat-checkbox {

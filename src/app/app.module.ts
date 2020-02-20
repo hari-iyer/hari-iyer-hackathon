@@ -15,8 +15,6 @@ import { AppComponent, DialogContentComponent } from './app.component';
     AppMaterialModule,
     BrowserAnimationsModule,
     AgmCoreModule.forRoot({
-      // please get your own API key here:
-      // https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en
       apiKey: 'AIzaSyBPULefWQ_-jhBiRhhPb7bRfpGuRYKeVmE'
     })
   ],
