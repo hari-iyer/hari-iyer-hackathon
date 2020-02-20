@@ -58,8 +58,35 @@
  
 
           </mat-tab>
-          <mat-tab label="Adventure">
+          <mat-tab label="Active">
             <ng-template matTabContent>
+<agm-map 
+  [disableDefaultUI]="false"
+  [zoomControl]="false"
+  (mapClick)="mapClicked($event)"
+  [fitBounds]="true"
+  [latitude]="lat"
+  [longitude]="lng">
+
+  <agm-marker 
+      *ngFor="let m of activeMarkers; let i = index"
+      (markerClick)="markerClicked(m.label,m.id);sidenav.toggle();"
+      [latitude]="m.lat"
+      [longitude]="m.lng"
+      [label]="m.label"
+      [iconUrl]= "m.iconType" 
+      [agmFitBounds]="true" >
+      
+   
+    
+  </agm-marker>
+
+</agm-map>
+            </ng-template>
+          </mat-tab>
+          <mat-tab label="Authentic">
+              <ng-template matTabContent>
+           
 <agm-map 
   [disableDefaultUI]="false"
   [zoomControl]="false"
@@ -77,33 +104,6 @@
       [iconUrl]= "m.iconType" 
       [agmFitBounds]="true" >
       
-   
-    
-  </agm-marker>
-
-</agm-map>
-            </ng-template>
-          </mat-tab>
-          <mat-tab label="Earth Kingdom">
-              <ng-template matTabContent>
-           
-<agm-map 
-  [disableDefaultUI]="false"
-  [zoomControl]="false"
-  (mapClick)="mapClicked($event)"
-  [fitBounds]="true"
-  [latitude]="lat"
-  [longitude]="lng">
-
-  <agm-marker 
-      *ngFor="let m of advMarkers; let i = index"
-      (markerClick)="markerClicked(m.label,m.id);sidenav.toggle();"
-      [latitude]="m.lat"
-      [longitude]="m.lng"
-      [label]="m.label"
-      [iconUrl]= "m.iconType" 
-      [agmFitBounds]="true" >
-      
   
     
   </agm-marker>
@@ -111,7 +111,7 @@
 </agm-map>
               </ng-template>
           </mat-tab>
-          <mat-tab label="Fire Nation">
+          <mat-tab label="Luxury">
      <ng-template matTabContent>       
 <agm-map 
   [disableDefaultUI]="false"

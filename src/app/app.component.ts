@@ -13,8 +13,9 @@ export class AppComponent {
 //  zoom: number = 8;
   
   // initial center position for the map
-  lat: number = 40.7128;
-  lng: number = -74.0060;
+  lat: number = 51.5080063;
+  lng: number = -0.0761301;
+  keystoneLabel: string = "Tower of London";
   isDarkTheme = false;
   lastDialogResult: string;
   mode: string;
@@ -64,7 +65,7 @@ export class AppComponent {
       id: 0,
 		  lat: this.lat,
 		  lng: this.lng,
-		  label: '0',
+		  label: this.keystoneLabel,
       iconType: this.keystoneIcon
     },
     {
@@ -92,69 +93,69 @@ export class AppComponent {
 
   authenticMarkers: marker[] = [
     {
-      id: 4,
+      id: 0,
 		  lat: this.lat,
 		  lng: this.lng,
-		  label: '0',
+		  label: this.keystoneLabel,
       iconType: this.keystoneIcon
     },
     {
       id: 5,
-		  lat: this.lat - 0.0032,
-		  lng: this.lng - 0.0003,
-		  label: '1',
+		  lat: 51.505544,
+		  lng: -0.0918757,
+		  label: 'Cafe Brood',
       iconType: this.pinIcon
     },
     {
       id: 6,
-		  lat: this.lat + 0.003,
-		  lng: this.lng - 0.0008,
-		  label: '2',
+		  lat: 51.5097184,
+		  lng: -0.0808009,
+		  label: 'Liberty Bounds',
       iconType: this.pinIcon
     },
     {
       id: 7,
-		  lat: this.lat,
-		  lng: this.lng - 0.007,
-		  label: '3',
+		  lat: 51.5120356,
+		  lng: -0.12443,
+		  label: 'Crusting Pipe',
       iconType: this.pinIcon
 	  }
   ]
 
-  advMarkers: marker[] = [
+  activeMarkers: marker[] = [
     {
-      id: 8,
+      id: 0,
 		  lat: this.lat,
 		  lng: this.lng,
-		  label: '0',
+		  label: this.keystoneLabel,
       iconType: this.keystoneIcon
     },
     {
       id: 9,
-		  lat: this.lat - 0.0043,
-		  lng: this.lng - 0.0014,
-		  label: '1',
+		  lat: 51.5021585,
+		  lng: -0.1315459,
+		  label: 'Chruchill War Rooms',
       iconType: this.pinIcon
     },
     {
       id: 10,
-		  lat: this.lat + 0.0041,
-		  lng: this.lng - 0.0091,
-		  label: '2',
+		  lat: 51.5195592,
+		  lng: -0.1384668,
+		  label: 'British Museum',
       iconType: this.pinIcon
     },
     {
       id: 11,
-		  lat: this.lat,
-		  lng: this.lng - 0.0081,
-		  label: '3',
+		  lat: 51.503324,
+		  lng: -0.1217317,
+		  label: 'The London Eye',
       iconType: this.pinIcon
 	  }
   ]
 
   luxMarkers: marker[] = [
     {
-      id: 12,
+      id: 0,
 		  lat: this.lat,
 		  lng: this.lng,
 		  label: '0',
