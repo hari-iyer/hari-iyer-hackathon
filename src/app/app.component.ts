@@ -101,22 +101,22 @@ export class AppComponent {
     },
     {
       id: 5,
-		  lat: 51.505544,
-		  lng: -0.0918757,
+		  lat: 51.505554,
+		  lng: -0.08969,
 		  label: 'Cafe Brood',
       iconType: this.pinIcon
     },
     {
       id: 6,
-		  lat: 51.5097184,
-		  lng: -0.0808009,
+		  lat: 51.509723,
+		  lng: -0.078612,
 		  label: 'Liberty Bounds',
       iconType: this.pinIcon
     },
     {
       id: 7,
-		  lat: 51.5120356,
-		  lng: -0.12443,
+		  lat: 51.512058,
+		  lng: -0.122156,
 		  label: 'Crusting Pipe',
       iconType: this.pinIcon
 	  }
@@ -132,22 +132,22 @@ export class AppComponent {
     },
     {
       id: 9,
-		  lat: 51.5021585,
-		  lng: -0.1315459,
+		  lat: 51.502171,
+		  lng: -0.129329,
 		  label: 'Chruchill War Rooms',
       iconType: this.pinIcon
     },
     {
       id: 10,
-		  lat: 51.5195592,
-		  lng: -0.1384668,
+		  lat: 51.519447,
+		  lng: -0.126878,
 		  label: 'British Museum',
       iconType: this.pinIcon
     },
     {
       id: 11,
-		  lat: 51.503324,
-		  lng: -0.1217317,
+		  lat: 51.503464,
+		  lng: -0.119404,
 		  label: 'The London Eye',
       iconType: this.pinIcon
 	  }
