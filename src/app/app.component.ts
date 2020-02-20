@@ -25,7 +25,29 @@ export class AppComponent {
 
   public selectedValue: string;
 
-
+  public customStyle = [
+    {
+      "featureType":"poi",
+      "elementType":"labels",
+      "stylers":[{
+        visibility: "off"
+      }]
+    },
+    {
+      "featureType":"administrative",
+      "elementType":"labels",
+      "stylers":[{
+        visibility: "off"
+      }]
+    },
+    {
+      "featureType":"transit",
+      "elementType":"labels",
+      "stylers":[{
+        visibility: "off"
+      }]
+    }
+  ]
 
   public progress = 0;
   public slider = {
@@ -45,7 +67,7 @@ export class AppComponent {
 
   keystoneIcon = {
     url: 'assets/images/star_icon_orig.svg',
-    labelOrigin: {  x: 115, y: 26 },
+    labelOrigin: {  x: 40, y: 80 },
     scaledSize: {
       width: 75,
       height: 75
@@ -135,7 +157,15 @@ export class AppComponent {
 		  lat: 51.502171,
 		  lng: -0.129329,
 		  label: 'Chruchill War Rooms',
-      iconType: this.pinIcon
+      iconType: 
+      { 
+        url: 'assets/images/pin.svg',
+        labelOrigin: { x: 40, y: 60 },
+        scaledSize: {
+          width: 75,
+          height: 75
+        }
+      }
     },
     {
       id: 10,
@@ -158,7 +188,7 @@ export class AppComponent {
       id: 0,
 		  lat: this.lat,
 		  lng: this.lng,
-		  label: '0',
+		  label: this.keystoneLabel,
       iconType: this.keystoneIcon
     },
     {
@@ -192,7 +222,7 @@ export class AppComponent {
   ];
 
   public color: string;
-  public details = [{name:'test1', type:'', distance:'twotest', averageSpend:'test',description:'',picture:''},{name:'test1', type:'', distance:'twotest', averageSpend:'test',description:'',picture:''},{name:'test1', type:'', distance:'twotest', averageSpend:'test',description:'',picture:''},{name:'test1', type:'', distance:'twotest', averageSpend:'test',description:'',picture:''},{name:'test6', details:'twotest'},{name:'test7', details:'twotest'},{name:'test8', details:'twotest'},{name:'test9', details:'twotest'},{name:'test10', details:'twotest'},{name:'test11', details:'twotest'},{name:'test12', details:'twotest'},{name:'test13', details:'twotest'},{name:'test14', details:'twotest'},{name:'test15', details:'twotest'},{name:'test16', details:'twotest'}];
+  public details = [{name:'Churchill War Rooms', type:'Museum', distance:'2.7', averageSpend:'$45.69',description:'History was made in Churchill War Rooms – the underground nerve centre that allowed Britain’s leaders to plot the allied route to victory during the Second World War. Step back in time and walk the top secret corridors of the Cabinet War Rooms.',picture:''},{name:'British Museum', type:'Museum', distance:'2.5', averageSpend:'$32.41',description:'The British Museum, in the Bloomsbury area of London, is a public institution dedicated to human history, art and culture. Its permanent collection of some eight million works is among the largest and most comprehensive in existence, having been widely sourced during the era of the British Empire.',picture:''},{name:'The London Eye', type:'', distance:'twotest', averageSpend:'test',description:'',picture:''},{name:'Cafe Brood', type:'', distance:'twotest', averageSpend:'test',description:'',picture:''},{name:'Liberty Bounds', details:'twotest'},{name:'Crusting Pipe', details:'twotest'},{name:'test8', details:'twotest'},{name:'test9', details:'twotest'},{name:'test10', details:'twotest'},{name:'test11', details:'twotest'},{name:'test12', details:'twotest'},{name:'test13', details:'twotest'},{name:'test14', details:'twotest'},{name:'test15', details:'twotest'},{name:'test16', details:'twotest'}];
   public currentCityDetails={};
   markerClicked( label:string,  index:number){
     //details
