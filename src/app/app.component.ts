@@ -54,7 +54,7 @@ export class AppComponent {
 
   pinIcon = {
     url: 'assets/images/pin.svg',
-    labelOrigin: { x: 57, y: 26 },
+    labelOrigin: { x: 40, y: 7 },
     scaledSize: {
       width: 75,
       height: 75
