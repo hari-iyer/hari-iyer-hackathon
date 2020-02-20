@@ -44,6 +44,7 @@ export class AppComponent {
 
   keystoneIcon = {
     url: 'assets/images/star_icon_orig.svg',
+    labelOrigin: {  x: 57, y: 26 },
     scaledSize: {
       width: 75,
       height: 75
@@ -52,6 +53,7 @@ export class AppComponent {
 
   pinIcon = {
     url: 'assets/images/pin.svg',
+    labelOrigin: { x: 57, y: 26 },
     scaledSize: {
       width: 75,
       height: 75
