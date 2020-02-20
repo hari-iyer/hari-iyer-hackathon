@@ -43,7 +43,7 @@ export class AppComponent {
   };
 
   keystoneIcon = {
-    url: 'assets/images/star_icon_orig.png',
+    url: 'assets/images/star_icon_orig.svg',
     scaledSize: {
       width: 75,
       height: 75
