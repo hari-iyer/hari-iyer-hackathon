@@ -192,7 +192,7 @@ export class AppComponent {
   ];
 
   public color: string;
-  public details = [{name:'test1', details:'twotest'},{name:'test2', details:'twotest'},{name:'test3', details:'twotest'},{name:'test4', details:'twotest'},{name:'test5', details:'twotest'},{name:'test6', details:'twotest'},{name:'test7', details:'twotest'},{name:'test8', details:'twotest'},{name:'test9', details:'twotest'},{name:'test10', details:'twotest'},{name:'test11', details:'twotest'},{name:'test12', details:'twotest'},{name:'test13', details:'twotest'},{name:'test14', details:'twotest'},{name:'test15', details:'twotest'},{name:'test16', details:'twotest'}];
+  public details = [{name:'test1', type:'', distance:'twotest', averageSpend:'test',description:'',picture:''},{name:'test1', type:'', distance:'twotest', averageSpend:'test',description:'',picture:''},{name:'test1', type:'', distance:'twotest', averageSpend:'test',description:'',picture:''},{name:'test1', type:'', distance:'twotest', averageSpend:'test',description:'',picture:''},{name:'test6', details:'twotest'},{name:'test7', details:'twotest'},{name:'test8', details:'twotest'},{name:'test9', details:'twotest'},{name:'test10', details:'twotest'},{name:'test11', details:'twotest'},{name:'test12', details:'twotest'},{name:'test13', details:'twotest'},{name:'test14', details:'twotest'},{name:'test15', details:'twotest'},{name:'test16', details:'twotest'}];
   public currentCityDetails={};
   markerClicked( label:string,  index:number){
     //details
