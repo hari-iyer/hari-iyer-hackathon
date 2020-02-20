@@ -59,28 +59,28 @@ export class AppComponent {
   }
   relaxMarkers: marker[] = [
     {
-      id: 1,
+      id: 0,
 		  lat: this.lat,
 		  lng: this.lng,
 		  label: '0',
       iconType: this.keystoneIcon
     },
     {
-      id:2,
+      id:1,
 		  lat: this.lat - 0.008,
 		  lng: this.lng + 0.001,
 		  label: '1',
       iconType: this.pinIcon
     },
     {
-      id: 3,
+      id: 2,
 		  lat: this.lat + 0.0042,
 		  lng: this.lng + 0.0005,
 		  label: '2',
       iconType: this.pinIcon
     },
     {
-      id: 4,
+      id: 3,
 		  lat: this.lat,
 		  lng: this.lng + 0.005,
 		  label: '3',
@@ -90,7 +90,7 @@ export class AppComponent {
 
   authenticMarkers: marker[] = [
     {
-      id: 1,
+      id: 4,
 		  lat: this.lat,
 		  lng: this.lng,
 		  label: '0',
@@ -121,28 +121,28 @@ export class AppComponent {
 
   advMarkers: marker[] = [
     {
-      id: 1,
+      id: 8,
 		  lat: this.lat,
 		  lng: this.lng,
 		  label: '0',
       iconType: this.keystoneIcon
     },
     {
-      id: 8,
+      id: 9,
 		  lat: this.lat - 0.0043,
 		  lng: this.lng - 0.0014,
 		  label: '1',
       iconType: this.pinIcon
     },
     {
-      id: 9,
+      id: 10,
 		  lat: this.lat + 0.0041,
 		  lng: this.lng - 0.0091,
 		  label: '2',
       iconType: this.pinIcon
     },
     {
-      id: 10,
+      id: 11,
 		  lat: this.lat,
 		  lng: this.lng - 0.0081,
 		  label: '3',
@@ -152,28 +152,28 @@ export class AppComponent {
 
   luxMarkers: marker[] = [
     {
-      id: 1,
+      id: 12,
 		  lat: this.lat,
 		  lng: this.lng,
 		  label: '0',
       iconType: this.keystoneIcon
     },
     {
-      id: 11,
+      id: 13,
 		  lat: this.lat - 0.0012,
 		  lng: this.lng - 0.0003,
 		  label: '1',
       iconType: this.pinIcon
     },
     {
-      id: 12,
+      id: 14,
 		  lat: this.lat + 0.005,
 		  lng: this.lng - 0.0004,
 		  label: '2',
       iconType: this.pinIcon
     },
     {
-      id: 13,
+      id: 15,
 		  lat: this.lat,
 		  lng: this.lng - 0.0035,
 		  label: '3',
@@ -189,7 +189,7 @@ export class AppComponent {
   ];
 
   public color: string;
-  public details = [{name:'onetest', details:'twotest'}];
+  public details = [{name:'test1', details:'twotest'},{name:'test2', details:'twotest'},{name:'test3', details:'twotest'},{name:'test4', details:'twotest'},{name:'test5', details:'twotest'},{name:'test6', details:'twotest'},{name:'test7', details:'twotest'},{name:'test8', details:'twotest'},{name:'test9', details:'twotest'},{name:'test10', details:'twotest'},{name:'test11', details:'twotest'},{name:'test12', details:'twotest'},{name:'test13', details:'twotest'},{name:'test14', details:'twotest'},{name:'test15', details:'twotest'},{name:'test16', details:'twotest'}];
   public currentCityDetails={};
   markerClicked( label:string,  index:number){
     //details
