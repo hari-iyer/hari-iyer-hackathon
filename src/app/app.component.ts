@@ -232,35 +232,21 @@ export class AppComponent {
     console.log(`clicked the marker: ${label || index}`)
   }
   
-  mapClicked($event: MouseEvent) {
-    this.markers.push({
-      lat: $event.coords.lat,
-      lng: $event.coords.lng,
-      draggable: true
-    });
-  }
+  // mapClicked($event: MouseEvent) {
+  //   this.markers.push({
+  //     lat: $event.coords.lat,
+  //     lng: $event.coords.lng,
+  //     draggable: true
+  //   });
+  // }
   
   markerDragEnd(m: marker, $event: MouseEvent) {
     console.log('dragEnd', m, $event);
   }
   
-  markers: marker[] = [
-	  {
-		  lat: 40.7128,
-		  lng: -74.0060,
-		  label: 'Keystone',
-		  draggable: true
-	  },
-      {
-		  lat: 40.7891,
-		  lng: -73.1350,
-		  label: 'lazy',
-		  draggable: true
-	  }
-  ]
+
 }
 
-// just an interface for type safety.
 interface marker {
   id: number,
 	lat: number;
@@ -268,6 +254,7 @@ interface marker {
 	label?: string;
   iconType: any;
 }
+
 
 
 @Component({
