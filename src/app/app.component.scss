@@ -103,8 +103,15 @@ mat-chip {
 agm-map {
     height: 600px;
   }
-p{
-  color: black;
-  font-size: 12;
-  word-wrap: inherit; 
+.p-nav-bar{
+  color:black;
+  font-size: 5;
+  white-space: normal;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: normal;
+ 
+}
+.title-center {
+  flex: 1 1 auto;
+  text-align: center;
 }
