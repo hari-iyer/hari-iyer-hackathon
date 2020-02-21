@@ -103,13 +103,22 @@ mat-chip {
 agm-map {
     height: 600px;
   }
-.p-nav-bar{
+.p-nav-bar-desc{
   color:black;
   font-size: 5;
   white-space: normal;
   font-family: 'Times New Roman', Times, serif;
   line-height: normal;
   background-color: lightgray;
+ 
+}
+.p-nav-bar{
+  color:black;
+  font-size: 5;
+  white-space: normal;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: normal;
+ 
  
 }
 .title-center {
