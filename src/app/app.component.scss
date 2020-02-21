@@ -5,7 +5,11 @@ mat-sidenav-container.m2app-dark {
 .app-content {
   padding: 5px;
 }
+.toolbar{
+  min-height: 500px;
+  
 
+}
 .app-content mat-card {
   margin: 5px;
 }
@@ -18,7 +22,7 @@ mat-sidenav-container.m2app-dark {
   justify-content: center;
  
   
-  min-width: 300px;
+  max-width: 600px;
   max-height: 500px;
 
 }
@@ -107,8 +111,8 @@ agm-map {
   color:black;
   font-size: 5;
   white-space: normal;
-  font-family: 'Times New Roman', Times, serif;
-  line-height: normal;
+  font-family: 'Georgia';
+    line-height: normal;
 
  
 }
@@ -116,12 +120,22 @@ agm-map {
   color:black;
   font-size: 5;
   white-space: normal;
-  font-family: 'Times New Roman', Times, serif;
-  line-height: normal;
- 
+  font-family: 'Times New Roman';
+    line-height: normal;
+    font-style: italic 
  
 }
+.b-highlight{
+  
+  color:  brown;
+}
+ 
 .title-center {
   flex: 1 1 auto;
   text-align: center;
+}
+.image{
+   border-radius: 8px;
+    width: 250px;
+    align-items: center;
 }

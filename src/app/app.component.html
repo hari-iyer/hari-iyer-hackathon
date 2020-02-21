@@ -1,9 +1,9 @@
 <mat-sidenav-container [class.m2app-dark]="isDarkTheme">
 
   <mat-sidenav #sidenav mode="next" class="app-sidenav" color="primary">
-    <mat-toolbar>
+    <mat-toolbar >
       <mat-toolbar-row>
-        <span  class="p-nav-bar,app-toolbar-filler" >{{currentCityDetails.name}}</span>
+        <span  class="p-nav-bar,app-toolbar-filler" ><b class="b-highlight"> {{currentCityDetails.name}}</b></span>
    
       </mat-toolbar-row>
       <mat-toolbar-row>
@@ -13,17 +13,14 @@
          </mat-toolbar-row>
       
         <mat-toolbar-row>
-          <span class="p-nav-bar">Attraction-Type: {{currentCityDetails.type}}
-         
-         Distance: {{currentCityDetails.distance}} KM
+          <span class="p-nav-bar"><b class="b-highlight">Attraction-Type:</b> {{currentCityDetails.type}}
         
-         AverageSpend:  {{currentCityDetails.averageSpend}}
+       <b class="b-highlight">  Distance: </b> {{currentCityDetails.distance}} KM
+        
+         <b class="b-highlight"> AverageSpend:  </b> {{currentCityDetails.averageSpend}}
       </span>
        </mat-toolbar-row>
-        <mat-toolbar-row>
-      
-         
- </mat-toolbar-row>
+   
     
    
      
@@ -36,6 +33,8 @@
      
 
     </mat-toolbar>
+    <br/>
+       <img src={{currentCityDetails.picture}} class="image">
 
   </mat-sidenav>
 
