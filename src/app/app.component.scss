@@ -14,8 +14,7 @@ mat-sidenav-container.m2app-dark {
   margin: 5px;
 }
 .app-sidenav {
-  
-  
+
 
   top:30%;
   left:5%;  
@@ -113,6 +112,8 @@ agm-map {
   white-space: normal;
   font-family: 'Georgia';
     line-height: normal;
+     height: 70%; 
+
 
  
 }
@@ -122,12 +123,21 @@ agm-map {
   white-space: normal;
   font-family: 'Times New Roman';
     line-height: normal;
-    font-style: italic 
+    font-style: italic;      
+  
+     
  
 }
+
+.taller-row{
+  height: 100%; 
+}
+
 .b-highlight{
    white-space: normal;
   color:  brown;
+     height: 50%;
+ 
 }
  
 .title-center {
