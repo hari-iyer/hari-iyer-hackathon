@@ -13,11 +13,12 @@
          </mat-toolbar-row>
       
         <mat-toolbar-row>
-          <span class="p-nav-bar"><b class="b-highlight">Attraction-Type:</b> {{currentCityDetails.type}}
+          <br/>
+          <span class="p-nav-bar">
         
-       <b class="b-highlight">  Distance: </b> {{currentCityDetails.distance}} KM
+       <b class="b-highlight">  Distance: </b> {{currentCityDetails.distance}} Miles<br/>
         
-         <b class="b-highlight"> AverageSpend:  </b> {{currentCityDetails.averageSpend}}
+         <b class="b-highlight"> Average Spend:  </b> {{currentCityDetails.averageSpend}}
       </span>
        </mat-toolbar-row>
    
@@ -35,7 +36,8 @@
     </mat-toolbar>
     <br/>
        <img src={{currentCityDetails.picture}} class="image">
-
+       <br/>
+ <button mat-raised-button color="warn" class="app-sidebar-button"  style="font-size : 25px; ">Buy Now</button>
   </mat-sidenav>
 
   <mat-toolbar color="primary">

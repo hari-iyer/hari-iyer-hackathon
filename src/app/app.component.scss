@@ -55,9 +55,11 @@ mat-sidenav-container.m2app-dark {
 .app-menu-button {
   padding: 0;
   min-width: 50px;
+
 }
 .app-button {
   margin: 5px;
+
 }
 
 .app-list {
@@ -123,7 +125,7 @@ agm-map {
   white-space: normal;
   font-family: 'Times New Roman';
     line-height: normal;
-    font-style: italic;      
+       
   
      
  
@@ -135,7 +137,7 @@ agm-map {
 
 .b-highlight{
    white-space: normal;
-  color:  brown;
+  color: darkblue;
      height: 50%;
  
 }
@@ -146,8 +148,12 @@ agm-map {
 }
 .image{
    border-radius: 8px;
-    width: 250px;
+    width: 300px;
      display: block;
   margin-left: auto;
   margin-right: auto;
+}
+.button-font{
+
+   font-family: 'Times New Roman';
 }
